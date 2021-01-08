@@ -1,1 +1,1 @@
-Deals api
+Deals
