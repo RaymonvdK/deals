@@ -2,7 +2,7 @@
 @include('sorting')
 
 <ul style="list-style-type: none;">
-    @foreach($deals as $deal)
+    @forelse ($deals as $deal)
         <a href="deal/{{ $deal->unique }}">
             <li>
                 <img src="https://media.socialdeal.nl{{ $deal->img }}" style="width: 300px;"/>
@@ -19,5 +19,7 @@
                 <br/>
             </li>
         </a>
-    @endforeach
+    @empty
+        There are no deals.
+    @endforelse
 </ul>
